@@ -134,37 +134,18 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
   text-decoration: none;
   color: inherit;
 }
 
-.brand-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--pink), var(--purple));
-  display: grid;
-  place-items: center;
-  font-size: 1.35rem;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-name {
-  font-family: "Fredoka", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-.brand-tag {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 600;
+.brand-logo {
+  display: block;
+  height: 52px;
+  width: 52px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 1px 0 rgba(30, 27, 75, 0.06);
 }
 
 .header-actions {
@@ -198,6 +179,10 @@ a {
   outline: 3px solid var(--sky);
   outline-offset: 4px;
   border-radius: 12px;
+}
+
+.brand:focus-visible .brand-logo {
+  box-shadow: 0 0 0 2px var(--sky);
 }
 
 .btn:active {
