@@ -128,74 +128,186 @@
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="top-bar" role="region" aria-label="Contact bar">
+    <div class="top-bar" role="region" aria-label="Call to action">
         <div class="container top-bar-inner">
-            <a href="#contact-form" class="top-bar-link top-bar-cta">Request a quote</a>
-            <span class="top-bar-sep" aria-hidden="true">·</span>
-            <a href="tel:+19735543581" class="top-bar-link">📞 (973) 554-3581</a>
-            <span class="top-bar-note">Morris County &amp; North NJ balloon décor</span>
+            <span class="top-bar-call">Call now! <a href="tel:+19735543581">(973) 554-3581</a></span>
+            <div class="top-bar-actions">
+                <a href="#contact-form" class="btn-top">Request a quote</a>
+                <a href="#gallery" class="btn-top btn-top-outline">View gallery</a>
+            </div>
         </div>
     </div>
+
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="/" aria-current="page">
-                <img class="brand-logo" src="images/logo.png" width="52" height="52" alt="Event Ease Balloon Décor NJ" decoding="async" fetchpriority="high">
+                <img class="brand-logo" src="images/logo.png" width="52" height="52" alt="" decoding="async" fetchpriority="high">
+                <span class="brand-text">
+                    <span class="brand-name">Event Ease Balloon Décor</span>
+                    <span class="brand-tag">Morris County &amp; North New Jersey</span>
+                </span>
             </a>
-            <div class="header-actions">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" tabindex="-1">
+            <label for="nav-toggle" class="nav-burger" aria-label="Open menu"><span></span></label>
+            <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta-row">
                 <a class="btn btn-secondary" href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Party rentals</a>
-                <a class="btn btn-primary" href="#contact-form">Get a quote</a>
+                <a class="btn btn-primary" href="#contact-form">Book your event</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="hero">
-            <div class="container">
-                <span class="hero-badge">Morris County &amp; North Jersey</span>
-                <h1>Balloon arches, garlands &amp; event décor in Morris County, NJ</h1>
-                <p class="hero-lead">Custom balloon arches, organic garlands, columns, and photo-ready backdrops — professional delivery and install for birthdays, baby showers, graduations, and corporate events. <strong>Start with the quote form below</strong> (fastest response); call or email if you prefer.</p>
-                <div class="hero-ctas">
-                    <a class="btn btn-primary" href="#contact-form">Request a quote — form</a>
-                    <a class="btn btn-secondary" href="tel:+19735543581">Call (973) 554-3581</a>
-                    <a class="btn btn-secondary" href="mailto:info@eventeaserental.com?subject=Balloon%20D%C3%A9cor%20inquiry%20-%20Event%20Ease">Email us</a>
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container hero-inner">
+                <h1 id="hero-heading">Balloon décor elevating corporate events &amp; private celebrations</h1>
+                <p class="hero-kicker">Throughout Morris County, North Jersey &amp; beyond</p>
+                <p class="hero-lead">Custom balloon arches, organic garlands, columns, and photo-ready backdrops with professional delivery and install. <strong>Our online quote form is the fastest way to reach us</strong> — or call <a href="tel:+19735543581">(973) 554-3581</a>.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-lg btn-primary" href="#gallery">View our work</a>
+                    <a class="btn btn-lg btn-secondary" href="#contact-form">Book your event</a>
                 </div>
             </div>
         </section>
 
-        <section class="section section-steps" aria-labelledby="steps-heading">
-            <div class="container">
-                <h2 id="steps-heading" class="section-title">How it works</h2>
-                <p class="section-intro">Send your details through the <a href="#contact-form">quote form</a> — then we refine palette, layout, and install day.</p>
-                <ol class="steps-list">
-                    <li class="steps-item">
-                        <span class="steps-num" aria-hidden="true">1</span>
-                        <div>
-                            <h3 class="steps-title">Tell us the basics</h3>
-                            <p class="steps-text">Date, venue, indoor or outdoor, and the mood you want — casual, glam, branded, or kid-forward.</p>
-                        </div>
-                    </li>
-                    <li class="steps-item">
-                        <span class="steps-num" aria-hidden="true">2</span>
-                        <div>
-                            <h3 class="steps-title">Palette &amp; layout</h3>
-                            <p class="steps-text">We align colors with your theme and recommend structures that fit your space and photos.</p>
-                        </div>
-                    </li>
-                    <li class="steps-item">
-                        <span class="steps-num" aria-hidden="true">3</span>
-                        <div>
-                            <h3 class="steps-title">Quote &amp; install</h3>
-                            <p class="steps-text">You get a clear quote; when you’re ready, we schedule professional setup so everything looks sharp on arrival.</p>
-                        </div>
-                    </li>
-                </ol>
+        <div class="hero-cta-bar" aria-hidden="true">
+            <div class="container hero-cta-bar-inner">
+                <a href="#gallery">View our work ➜</a>
+                <a href="#contact-form">Book your event ➜</a>
+            </div>
+        </div>
+
+        <section class="quick-tiles" id="services" aria-label="Service areas">
+            <div class="container tiles-grid">
+                <a class="tile" href="#contact-form"><span class="tile-icon" aria-hidden="true">🎉</span>Private parties</a>
+                <a class="tile" href="#contact-form"><span class="tile-icon" aria-hidden="true">🏢</span>Corporate events</a>
+                <a class="tile" href="#contact-form"><span class="tile-icon" aria-hidden="true">✉️</span>Request a quote</a>
+                <a class="tile" href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer"><span class="tile-icon" aria-hidden="true">⛺</span>Party rentals</a>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="gallery-heading">
+        <section class="section-split" id="spotlight" aria-labelledby="spotlight-heading">
+            <div class="container split">
+                <div class="split-media">
+                    <img src="images/gallery-1.jpg" alt="Balloon arch and garland install for a New Jersey event" width="800" height="600" loading="eager" fetchpriority="high" onerror="this.onerror=null;this.src='images/gallery-1.svg';">
+                </div>
+                <div class="split-copy">
+                    <h2 id="spotlight-heading">Photo-ready balloon installs for parties &amp; special events</h2>
+                    <p>From birthdays and showers to grand openings and corporate milestones, we design installs that photograph beautifully and match your venue.</p>
+                    <p>Browse the gallery, then <a href="#contact-form">send your date, location, and color ideas</a> — we follow up with layout options and pricing.</p>
+                    <div class="split-actions">
+                        <a class="btn btn-primary" href="#gallery">See more photos</a>
+                        <a class="btn btn-secondary" href="#contact-form">Request a free quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-about" id="about" aria-labelledby="about-heading">
+            <div class="container about-grid">
+                <div class="about-copy">
+                    <span class="section-label">About us</span>
+                    <h2 id="about-heading">Beautiful balloon décor for every occasion</h2>
+                    <p>We are committed to high-quality balloon art — organic garlands, classic arches, columns, and custom backdrops — for homes, venues, and businesses across Morris County and North Jersey.</p>
+                    <p>Event Ease Balloon Décor NJ is part of the Event Ease family, alongside <a href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Event Ease Party Rentals</a>, so you can coordinate décor with tents, tables, and more when you need the full setup.</p>
+                    <div class="split-actions">
+                        <a class="btn btn-primary" href="#gallery">View our services</a>
+                        <a class="btn btn-secondary" href="#contact-form">Book your event</a>
+                    </div>
+                </div>
+                <div class="steps-compact" aria-labelledby="steps-heading">
+                    <span class="section-label" id="steps-heading">How it works</span>
+                    <div class="step-compact">
+                        <span class="step-num" aria-hidden="true">1</span>
+                        <div>
+                            <h3>Tell us the basics</h3>
+                            <p>Use the <a href="#contact-form">quote form</a> with your date, venue, indoor or outdoor, and the vibe you want.</p>
+                        </div>
+                    </div>
+                    <div class="step-compact">
+                        <span class="step-num" aria-hidden="true">2</span>
+                        <div>
+                            <h3>Palette &amp; layout</h3>
+                            <p>We align colors with your theme and recommend structures that fit your space and photos.</p>
+                        </div>
+                    </div>
+                    <div class="step-compact">
+                        <span class="step-num" aria-hidden="true">3</span>
+                        <div>
+                            <h3>Quote &amp; install</h3>
+                            <p>You get a clear quote; we schedule professional setup so everything looks sharp when guests arrive.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-testimonials" aria-labelledby="reviews-heading">
             <div class="container">
-                <h2 id="gallery-heading" class="section-title">Balloon décor gallery</h2>
-                <p class="section-intro">Recent balloon arches, garlands, and installs across Morris County and North Jersey. <a href="#contact-form">Request a quote</a> to plan your colors and layout.</p>
+                <h2 id="reviews-heading" class="section-title">Some love from our customers</h2>
+                <p class="section-intro">A few words from hosts who trusted Event Ease for their celebrations.</p>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <blockquote>“Communication was easy and the balloon garland looked amazing in photos. We will reach out again for our next event.”</blockquote>
+                        <cite>— Private party host, Morris County</cite>
+                    </article>
+                    <article class="testimonial-card">
+                        <blockquote>“Professional install and pickup. The colors matched our brand perfectly for our retail opening.”</blockquote>
+                        <cite>— Small business, North Jersey</cite>
+                    </article>
+                    <article class="testimonial-card">
+                        <blockquote>“They helped us pick a layout that fit the venue. Guests commented on the backdrop all night.”</blockquote>
+                        <cite>— Birthday celebration</cite>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-occasions" aria-labelledby="occasions-heading">
+            <div class="container">
+                <h2 id="occasions-heading" class="section-title">We deliver smiles every day</h2>
+                <p class="section-intro">Balloon arches, garlands, and installs for the moments that matter — <a href="#contact-form">tell us about your event</a>.</p>
+                <div class="occasions-grid">
+                    <div class="occasion-col">
+                        <h3>Birthday &amp; baby</h3>
+                        <ul>
+                            <li><strong>Milestone birthdays</strong></li>
+                            <li>Baby shower · New baby · Gender reveal</li>
+                        </ul>
+                        <h3>Bridal &amp; wedding</h3>
+                        <ul>
+                            <li>Engagement · Bridal shower · Wedding</li>
+                            <li>Anniversary · Bachelorette</li>
+                        </ul>
+                    </div>
+                    <div class="occasion-col">
+                        <h3>Religious &amp; family</h3>
+                        <ul>
+                            <li>Baptism · Communions · Bar &amp; bat mitzvahs</li>
+                            <li>Family milestones &amp; reunions</li>
+                        </ul>
+                        <h3>Milestone &amp; corporate</h3>
+                        <ul>
+                            <li>Graduation · Retirement</li>
+                            <li><strong>Grand openings</strong> · Corporate events · Retail displays</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted" aria-labelledby="gallery-heading">
+            <div class="container">
+                <h2 id="gallery-heading" class="section-title">Gallery</h2>
+                <p class="section-intro">Recent balloon arches, garlands, and installs. <a href="#contact-form">Request a quote</a> to plan your colors and layout.</p>
                 <div class="cards">
                     <article class="card gallery-card"><img src="images/gallery-1.jpg" alt="Custom balloon arch or garland install — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src='images/gallery-1.svg';"></article>
                     <article class="card gallery-card"><img src="images/gallery-2.jpg" alt="Organic balloon garland for party or event in New Jersey" width="800" height="800" loading="lazy" onerror="this.onerror=null;this.src='images/gallery-2.svg';"></article>
@@ -210,19 +322,19 @@
         <section class="section" aria-labelledby="more-heading">
             <div class="container">
                 <h2 id="more-heading" class="section-title">Plan the full party</h2>
-                <p class="section-intro">Balloon décor is part of the Event Ease family. Need tents, tables, chairs, or a bounce house? Our party rental team has you covered.</p>
+                <p class="section-intro">Need tents, tables, chairs, or a bounce house? Our party rental team has you covered.</p>
                 <div class="cards">
                     <article class="card card-party">
                         <div class="card-icon" aria-hidden="true">⛺</div>
                         <h2>Event Ease Party Rentals</h2>
-                        <p>Browse tents, seating, inflatables, audio, lighting, and more — same trusted service, built for bigger celebrations.</p>
+                        <p>Tents, seating, inflatables, audio, lighting, and more — same trusted service for bigger celebrations.</p>
                         <a class="btn btn-primary" href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Visit party rentals site</a>
                     </article>
                     <article class="card">
-                        <div class="card-icon" aria-hidden="true">🎉</div>
-                        <h2>Perfect for</h2>
-                        <p>Birthdays, baby showers, graduations, sweet sixteens, corporate openings, retail displays, and backyard milestones.</p>
-                        <a class="btn btn-secondary" href="#contact-form">Tell us your event details</a>
+                        <div class="card-icon" aria-hidden="true">📋</div>
+                        <h2>Start with balloon décor</h2>
+                        <p>Birthdays, showers, graduations, sweet sixteens, corporate openings, and backyard milestones.</p>
+                        <a class="btn btn-secondary" href="#contact-form">Request a quote</a>
                     </article>
                 </div>
             </div>
@@ -231,32 +343,40 @@
         <section class="section section-faq" id="faq" aria-labelledby="faq-heading">
             <div class="container">
                 <h2 id="faq-heading" class="section-title">Balloon décor FAQ</h2>
-                <p class="section-intro">Quick answers about balloon arches, garlands, and how to reach us in Morris County and North New Jersey.</p>
+                <p class="section-intro">Morris County, North Jersey, arches, garlands, and how to reach us.</p>
                 <div class="faq-list">
                     <div class="faq-item">
                         <h3 class="faq-q">What areas do you serve?</h3>
-                        <p class="faq-a">We focus on <strong>Morris County, NJ</strong>, and surrounding towns in North Jersey. Put your venue or town in the <a href="#contact-form">quote form</a> and we will confirm we can be there.</p>
+                        <p class="faq-a">We focus on <strong>Morris County, NJ</strong>, and surrounding North Jersey towns. Add your venue in the <a href="#contact-form">quote form</a> and we will confirm availability.</p>
                     </div>
                     <div class="faq-item">
                         <h3 class="faq-q">How do I request a balloon décor quote?</h3>
-                        <p class="faq-a">Use the <strong><a href="#contact-form">Request a décor quote</a></strong> form on this page — it is the fastest way to share your date, location, and ideas. We reply with next steps and pricing. You can also call <a href="tel:+19735543581">(973) 554-3581</a>.</p>
+                        <p class="faq-a">Use the <strong><a href="#contact-form">Request a décor quote</a></strong> form — fastest for date, location, and ideas. Or call <a href="tel:+19735543581">(973) 554-3581</a>.</p>
                     </div>
                     <div class="faq-item">
                         <h3 class="faq-q">What balloon décor do you install?</h3>
-                        <p class="faq-a">We design and install <strong>balloon arches</strong>, <strong>organic garlands</strong>, columns, clusters, and photo-ready backdrops in your colors — ideal for birthdays, baby showers, graduations, sweet sixteens, and corporate or retail events.</p>
+                        <p class="faq-a"><strong>Arches</strong>, <strong>organic garlands</strong>, columns, clusters, and photo-ready backdrops in your colors.</p>
                     </div>
                     <div class="faq-item">
                         <h3 class="faq-q">How far in advance should I book?</h3>
-                        <p class="faq-a">Weekends and peak seasons book quickly. Send your date through the form as early as you can; we will let you know availability and install timing.</p>
+                        <p class="faq-a">Popular weekends fill early — send your date as soon as you can.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="contact-form" aria-labelledby="contact-heading">
+        <div class="cta-band" aria-labelledby="cta-band-heading">
+            <div class="container">
+                <h2 id="cta-band-heading">Ready for a free décor quote?</h2>
+                <p>Tell us about your event — we will follow up with ideas, timing, and pricing for Morris County and North Jersey.</p>
+                <a class="btn btn-lg btn-primary" href="#contact-form">Request a free quote</a>
+            </div>
+        </div>
+
+        <section class="section section-contact" id="contact-form" aria-labelledby="contact-heading">
             <div class="container">
                 <h2 id="contact-heading" class="section-title">Request a décor quote — contact us</h2>
-                <p class="section-intro">This form is the <strong>main way to reach our balloon décor team</strong> for Morris County and North Jersey events. Add your date, location, and style; we follow up with ideas, timing, and pricing. Prefer phone? Call <a href="tel:+19735543581">(973) 554-3581</a>.</p>
+                <p class="section-intro">This form is the <strong>main way to reach our balloon décor team</strong>. Add your date, location, and style; we follow up with ideas, timing, and pricing. Prefer phone? <a href="tel:+19735543581">(973) 554-3581</a>.</p>
                 <div id="form-success-msg" class="form-success-banner" hidden>
                     <strong>Thank you!</strong> Your request was sent. We’ll get back to you soon.
                 </div>
@@ -336,20 +456,49 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <div class="footer-contact">
-                <a href="#contact-form">Quote form</a>
-                <span class="footer-sep" aria-hidden="true">·</span>
-                <a href="tel:+19735543581">(973) 554-3581</a>
-                <span class="footer-sep" aria-hidden="true">·</span>
-                <a href="mailto:info@eventeaserental.com">info@eventeaserental.com</a>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact</h3>
+                <p><strong>Event Ease Balloon Décor NJ</strong></p>
+                <p>128 Franklin Avenue, PMB #2200<br>Rockaway, NJ 07866</p>
+                <p>Serving Morris County &amp; North Jersey</p>
+                <p><a href="tel:+19735543581">(973) 554-3581</a></p>
+                <p><a href="mailto:info@eventeaserental.com">info@eventeaserental.com</a></p>
+                <p><a class="btn btn-primary" href="#contact-form">Request a quote</a></p>
             </div>
-            <p class="footer-copy">© <span id="y"></span> Event Ease Balloon Décor NJ · Sister site of <a href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Event Ease Party Rentals</a></p>
+            <div class="footer-col">
+                <h3 class="footer-heading">Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact-form">Contact / quote</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Event Ease family</h3>
+                <p>Balloon décor pairs with tents, tables, chairs, inflatables, and more.</p>
+                <p><a href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Event Ease Party Rentals</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© <span id="y"></span> Event Ease Balloon Décor NJ · Sister site of <a href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Event Ease Party Rentals</a></p>
         </div>
     </footer>
     <script src="js/ga.js"></script>
     <script>
         document.getElementById('y').textContent = new Date().getFullYear();
+        (function () {
+            var toggle = document.getElementById('nav-toggle');
+            if (toggle) {
+                document.querySelectorAll('.nav-list a').forEach(function (a) {
+                    a.addEventListener('click', function () {
+                        toggle.checked = false;
+                    });
+                });
+            }
+        })();
         (function () {
             var nextEl = document.getElementById('formsubmit-next');
             if (!nextEl) return;
