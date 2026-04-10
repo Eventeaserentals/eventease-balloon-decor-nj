@@ -993,6 +993,95 @@ a {
   border: none;
 }
 
+/* Legal pages (Privacy, Terms) */
+.legal-page-main {
+  padding: var(--section-y) 0 calc(var(--section-y) + 0.5rem);
+}
+
+.legal-back {
+  margin: 0 0 1rem;
+}
+
+.legal-back a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.legal-back a:hover {
+  text-decoration: underline;
+}
+
+.legal-prose {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.legal-prose h1 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2rem);
+  margin: 0 0 0.35rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.legal-updated {
+  margin: 0 0 1.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.legal-prose h2 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-size: 1.12rem;
+  margin: 1.65rem 0 0.5rem;
+  color: var(--ink);
+}
+
+.legal-prose p,
+.legal-prose li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.legal-prose p {
+  margin: 0 0 0.85rem;
+}
+
+.legal-prose ul {
+  margin: 0 0 0.85rem;
+  padding-left: 1.35rem;
+}
+
+.legal-prose li {
+  margin-bottom: 0.35rem;
+}
+
+.legal-prose a {
+  font-weight: 700;
+}
+
+.legal-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.form-legal-note {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 36rem;
+}
+
+.form-legal-note a {
+  font-weight: 700;
+}
+
 /* Footer */
 .site-footer {
   background: var(--ink);
