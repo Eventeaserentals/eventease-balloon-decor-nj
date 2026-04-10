@@ -556,11 +556,15 @@
                 <div id="form-success-msg" class="form-success-banner" hidden>
                     <strong>Thank you!</strong> Your request was sent. We’ll get back to you soon.
                 </div>
+                <div id="form-error-msg" class="form-error-banner" hidden role="alert">
+                    <strong>Something went wrong.</strong> Please call <a href="tel:+19735543581">(973) 554-3581</a> or email <a href="mailto:info@eventeaserental.com">info@eventeaserental.com</a> so we can help. You can also try sending the form again.
+                </div>
                 <form id="balloon-inquiry-form" class="contact-form" action="https://formsubmit.co/info@eventeaserental.com" method="POST">
                     <input type="hidden" name="_subject" value="Balloon Décor Request — Event Ease Balloon Décor NJ">
                     <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_next" value="" id="formsubmit-next">
-                    <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://eventeaseballoondecornj.com/?inquiry=sent#contact-form">
+                    <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" value="">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="inquiry-name">Name <span class="req" aria-hidden="true">*</span></label>
@@ -740,12 +744,55 @@
             }
         })();
         (function () {
-            var nextEl = document.getElementById('formsubmit-next');
-            if (!nextEl) return;
-            var path = window.location.pathname;
-            var base = path.endsWith('/') ? path : path.replace(/[^/]+$/, '');
-            if (!base.endsWith('/')) base += '/';
-            nextEl.value = window.location.origin + base + '?inquiry=sent#contact-form';
+            var form = document.getElementById('balloon-inquiry-form');
+            if (!form) return;
+            var msgOk = document.getElementById('form-success-msg');
+            var msgErr = document.getElementById('form-error-msg');
+            var endpoint = 'https://formsubmit.co/ajax/info%40eventeaserental.com';
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (msgErr) msgErr.hidden = true;
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                var btn = form.querySelector('button[type="submit"]');
+                var prevText = btn ? btn.textContent : '';
+                if (btn) {
+                    btn.disabled = true;
+                    btn.textContent = 'Sending…';
+                }
+                var fd = new FormData(form);
+                fetch(endpoint, {
+                    method: 'POST',
+                    body: fd,
+                    headers: { Accept: 'application/json' }
+                })
+                    .then(function (res) {
+                        if (res.ok) return res;
+                        return res.text().then(function (t) {
+                            throw new Error(t || res.status);
+                        });
+                    })
+                    .then(function () {
+                        form.style.display = 'none';
+                        if (msgOk) msgOk.hidden = false;
+                        form.reset();
+                        try {
+                            var u = new URL(window.location.href);
+                            u.searchParams.set('inquiry', 'sent');
+                            u.hash = 'contact-form';
+                            history.replaceState({}, '', u.pathname + u.search + u.hash);
+                        } catch (ignore) {}
+                    })
+                    .catch(function () {
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.textContent = prevText;
+                        }
+                        if (msgErr) msgErr.hidden = false;
+                    });
+            });
         })();
     </script>
     <script>

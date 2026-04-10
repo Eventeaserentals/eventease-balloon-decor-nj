@@ -904,6 +904,22 @@ a {
   line-height: 1.5;
 }
 
+.form-error-banner {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius);
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.28);
+  text-align: center;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.form-error-banner a {
+  color: var(--purple);
+  font-weight: 700;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
