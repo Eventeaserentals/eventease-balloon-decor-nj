@@ -10,6 +10,8 @@
   --shadow: 0 14px 40px rgba(30, 27, 75, 0.1);
   --section-y: clamp(2.75rem, 5vw, 4rem);
   --border-soft: rgba(139, 92, 246, 0.14);
+  --lightbox-w: min(88vw, 900px);
+  --lightbox-h: min(70vh, 640px);
 }
 
 *,
@@ -650,8 +652,8 @@ a {
 }
 
 .gallery-lightbox {
-  max-width: min(96vw, 1100px);
-  width: min(96vw, 1100px);
+  max-width: min(96vw, 940px);
+  width: min(96vw, 940px);
   padding: 0;
   border: none;
   border-radius: var(--radius);
@@ -699,13 +701,13 @@ a {
 
 .gallery-lightbox-img {
   display: block;
-  max-width: 100%;
-  max-height: min(82vh, 920px);
-  width: auto;
-  height: auto;
+  width: var(--lightbox-w);
+  height: var(--lightbox-h);
   margin: 0 auto;
   object-fit: contain;
+  object-position: center;
   border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .gallery-lightbox-caption {
