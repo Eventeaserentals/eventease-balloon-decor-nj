@@ -286,6 +286,11 @@ a {
   color: var(--purple);
 }
 
+.header-cta-row {
+  order: 2;
+  flex-shrink: 0;
+}
+
 @media (max-width: 960px) {
   .brand {
     flex: 1;
@@ -324,6 +329,11 @@ a {
   .nav-list-external a {
     min-height: 44px;
   }
+
+  .header-cta-row .btn {
+    min-height: 44px;
+    padding-inline: 1.15rem;
+  }
 }
 
 @media (min-width: 961px) {
@@ -340,6 +350,10 @@ a {
     padding: 0 !important;
     margin: 0 !important;
     border: none !important;
+  }
+
+  .header-cta-row {
+    order: 3;
   }
 
   .nav-burger {
