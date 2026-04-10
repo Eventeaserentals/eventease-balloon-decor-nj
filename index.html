@@ -750,6 +750,7 @@
             var msgErr = document.getElementById('form-error-msg');
             var endpoint = 'https://formsubmit.co/ajax/info%40eventeaserental.com';
             form.addEventListener('submit', function (e) {
+                if (typeof fetch !== 'function') return;
                 e.preventDefault();
                 if (msgErr) msgErr.hidden = true;
                 if (!form.checkValidity()) {
