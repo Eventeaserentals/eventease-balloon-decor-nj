@@ -25,8 +25,8 @@
     <meta name="twitter:image" content="https://eventeaseballoondecornj.com/images/logo.png">
     <meta name="twitter:image:alt" content="Event Ease Balloon Décor New Jersey">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="icon" href="images/logo.png" type="image/png" sizes="1024x1024">
-    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="icon" href="/images/logo.png" type="image/png" sizes="1024x1024">
+    <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -138,7 +138,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="/" aria-current="page">
-                <img class="brand-logo" src="images/logo.png" width="52" height="52" alt="" decoding="async" fetchpriority="high">
+                <img class="brand-logo" src="/images/logo.png" width="52" height="52" alt="" decoding="async" fetchpriority="high">
                 <span class="brand-text">
                     <span class="brand-name">Event Ease Balloon Décor</span>
                     <span class="brand-tag">Morris County &amp; North New Jersey</span>
@@ -217,7 +217,7 @@
             <div class="container">
                 <header class="section-head">
                     <h2 id="gallery-heading">Gallery</h2>
-                    <p class="section-deck">Recent arches, garlands, and installs across Morris County and North Jersey. <strong>Click any photo</strong> to view it larger.</p>
+                    <p class="section-deck">Each category uses three photos in an auto-scrolling row (three tiles visible at once on desktop). <strong>Click a photo</strong> to enlarge. <strong>Hover</strong> a row to pause. Add more images later by duplicating the block marked in the HTML.</p>
                     <nav class="gallery-jump" aria-label="Gallery categories">
                         <a class="gallery-jump-link" href="#gallery-birthdays">Birthdays</a>
                         <a class="gallery-jump-link" href="#gallery-graduation">Graduation</a>
@@ -227,109 +227,124 @@
 
                 <div class="gallery-category" id="gallery-birthdays">
                     <h3 class="gallery-category-title">Birthdays</h3>
-                    <div class="gallery-grid">
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: birthday blue and white balloon setup">
-                                <img src="images/Birthday%20Blue%20and%20White.png" alt="Birthday balloon décor in blue and white — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: birthday balloon setup">
-                                <img src="images/Birthday%20Setup.png" alt="Birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: first birthday balloon setup">
-                                <img src="images/1st%20Bithday%20Setup.png" alt="First birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: 30th birthday balloon setup">
-                                <img src="images/30th%20Birthday%20Setup.png" alt="30th birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: Paw Patrol themed birthday setup">
-                                <img src="images/Birthday%20Setup%20-%20Paw%20Patrol%20Theme.png" alt="Birthday balloon setup, Paw Patrol theme — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: soccer themed birthday setup">
-                                <img src="images/Birthday%20Setup%20-%20Soccer%20Theme.png" alt="Birthday balloon setup, soccer theme — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
+                    <div class="gallery-carousel" role="region" aria-label="Birthday balloon photos, auto-scrolling" style="--marquee-sec: 36s;">
+                        <div class="gallery-carousel-viewport">
+                            <div class="gallery-carousel-track">
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: birthday blue and white balloon setup">
+                                        <img src="/images/Birthday%20Blue%20and%20White.png" alt="Birthday balloon décor in blue and white — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: birthday balloon setup">
+                                        <img src="/images/Birthday%20Setup.png" alt="Birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: first birthday balloon setup">
+                                        <img src="/images/1st%20Bithday%20Setup.png" alt="First birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <!-- Duplicate the slides above (same order) for seamless loop; add new photos above this comment -->
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: birthday blue and white balloon setup">
+                                        <img src="/images/Birthday%20Blue%20and%20White.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: birthday balloon setup">
+                                        <img src="/images/Birthday%20Setup.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: first birthday balloon setup">
+                                        <img src="/images/1st%20Bithday%20Setup.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="gallery-category" id="gallery-graduation">
                     <h3 class="gallery-category-title">Graduation</h3>
-                    <div class="gallery-grid">
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation balloon setup 2026">
-                                <img src="images/Graduation%20Setup%202026.png" alt="Graduation balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation celebration 2026">
-                                <img src="images/Grad%202026-2.jpg" alt="Graduation balloon décor — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation balloon setup">
-                                <img src="images/Grad%20Setup.png" alt="Graduation balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
+                    <div class="gallery-carousel" role="region" aria-label="Graduation balloon photos, auto-scrolling" style="--marquee-sec: 40s;">
+                        <div class="gallery-carousel-viewport">
+                            <div class="gallery-carousel-track">
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation balloon setup 2026">
+                                        <img src="/images/Graduation%20Setup%202026.png" alt="Graduation balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation celebration 2026">
+                                        <img src="/images/Grad%202026-2.jpg" alt="Graduation balloon décor — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation balloon setup">
+                                        <img src="/images/Grad%20Setup.png" alt="Graduation balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <!-- Duplicate the slides above (same order) for seamless loop; add new photos above this comment -->
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: graduation balloon setup 2026">
+                                        <img src="/images/Graduation%20Setup%202026.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: graduation celebration 2026">
+                                        <img src="/images/Grad%202026-2.jpg" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: graduation balloon setup">
+                                        <img src="/images/Grad%20Setup.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="gallery-category" id="gallery-baby-showers">
                     <h3 class="gallery-category-title">Baby showers</h3>
-                    <div class="gallery-grid">
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower neutral theme setup">
-                                <img src="images/Baby%20Shower%20Krishma%20-%20Neutral%20Theme%20Setup.png" alt="Baby shower neutral theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower girl theme setup">
-                                <img src="images/Baby%20Shower%20-%20Krishna%20Girl%20setup.png" alt="Baby shower girl theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower basic neutral setup">
-                                <img src="images/Baby%20Shower%20-%20Basic%20Neutral%20Setup.png" alt="Baby shower basic neutral balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower jungle theme setup">
-                                <img src="images/Baby%20Shower%20Jumgle%20Setup.png" alt="Baby shower jungle theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: neutral pampas feather baby shower theme">
-                                <img src="images/Baby%20Show%20-%20Neutal%20Pampas%20Feather%20Theme%20.png" alt="Baby shower neutral pampas and feather theme — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: neutral safari baby shower theme">
-                                <img src="images/Baby%20Show-%20Neutal%20Safari%20Theme.png" alt="Baby shower neutral safari theme — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: neutral baby shower setup">
-                                <img src="images/Baby%20Show%20-%20Neutral.png" alt="Baby shower neutral balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: neutral baby shower setup variation">
-                                <img src="images/Baby%20Show%20-%20Neutral%20%283%29.png" alt="Baby shower neutral balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
-                        <article class="gallery-cell">
-                            <button type="button" class="gallery-thumb" aria-label="Enlarge: neutral baby shower setup variation">
-                                <img src="images/Baby%20Show%20-%20Neutral%20%284%29.png" alt="Baby shower neutral balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
-                            </button>
-                        </article>
+                    <div class="gallery-carousel" role="region" aria-label="Baby shower balloon photos, auto-scrolling" style="--marquee-sec: 36s;">
+                        <div class="gallery-carousel-viewport">
+                            <div class="gallery-carousel-track">
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower neutral theme setup">
+                                        <img src="/images/Baby%20Shower%20Krishma%20-%20Neutral%20Theme%20Setup.png" alt="Baby shower neutral theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower girl theme setup">
+                                        <img src="/images/Baby%20Shower%20-%20Krishna%20Girl%20setup.png" alt="Baby shower girl theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide">
+                                    <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower basic neutral setup">
+                                        <img src="/images/Baby%20Shower%20-%20Basic%20Neutral%20Setup.png" alt="Baby shower basic neutral balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <!-- Duplicate the slides above (same order) for seamless loop; add new photos above this comment -->
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: baby shower neutral theme setup">
+                                        <img src="/images/Baby%20Shower%20Krishma%20-%20Neutral%20Theme%20Setup.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: baby shower girl theme setup">
+                                        <img src="/images/Baby%20Shower%20-%20Krishna%20Girl%20setup.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                                <article class="gallery-cell gallery-carousel-slide" aria-hidden="true">
+                                    <button type="button" class="gallery-thumb" tabindex="-1" aria-hidden="true" aria-label="Enlarge: baby shower basic neutral setup">
+                                        <img src="/images/Baby%20Shower%20-%20Basic%20Neutral%20Setup.png" alt="" width="800" height="800" loading="lazy" decoding="async">
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -568,10 +583,14 @@
                         var im = btn.querySelector('img');
                         if (!im) return;
                         big.src = im.currentSrc || im.src;
-                        big.alt = im.alt || '';
+                        var caption = (im.alt || '').trim();
+                        if (!caption && btn.getAttribute('aria-label')) {
+                            caption = btn.getAttribute('aria-label').replace(/^Enlarge:\s*/i, '').trim();
+                        }
+                        big.alt = caption;
                         if (cap) {
-                            cap.textContent = im.alt || '';
-                            cap.hidden = !im.alt;
+                            cap.textContent = caption;
+                            cap.hidden = !caption;
                         }
                         dlg.showModal();
                     });
