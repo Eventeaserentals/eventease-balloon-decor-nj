@@ -217,16 +217,65 @@
             <div class="container">
                 <header class="section-head">
                     <h2 id="gallery-heading">Gallery</h2>
-                    <p class="section-deck">Recent arches, garlands, and installs across Morris County and North Jersey.</p>
+                    <p class="section-deck">Recent arches, garlands, and installs across Morris County and North Jersey. <strong>Click any photo</strong> to view it larger.</p>
+                    <nav class="gallery-jump" aria-label="Gallery categories">
+                        <a class="gallery-jump-link" href="#gallery-birthdays">Birthdays</a>
+                        <a class="gallery-jump-link" href="#gallery-graduation">Graduation</a>
+                        <a class="gallery-jump-link" href="#gallery-baby-showers">Baby showers</a>
+                    </nav>
                 </header>
-                <div class="gallery-grid">
-                    <article class="gallery-cell"><img src="images/Birthday%20Blue%20and%20White.png" alt="Birthday balloon décor in blue and white — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
-                    <article class="gallery-cell"><img src="images/Graduation%20Setup%202026.png" alt="Graduation balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
-                    <article class="gallery-cell"><img src="images/Birthday%20Setup.png" alt="Birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
-                    <article class="gallery-cell"><img src="images/Baby%20Shower%20Krishma%20-%20Neutral%20Theme%20Setup.png" alt="Baby shower neutral theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
-                    <article class="gallery-cell"><img src="images/Baby%20Shower%20-%20Krishna%20Girl%20setup.png" alt="Baby shower girl theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
-                    <article class="gallery-cell"><img src="images/1st%20Bithday%20Setup.png" alt="First birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
-                    <article class="gallery-cell"><img src="images/30th%20Birthday%20Setup.png" alt="30th birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy"></article>
+
+                <div class="gallery-category" id="gallery-birthdays">
+                    <h3 class="gallery-category-title">Birthdays</h3>
+                    <div class="gallery-grid">
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: birthday blue and white balloon setup">
+                                <img src="images/Birthday%20Blue%20and%20White.png" alt="Birthday balloon décor in blue and white — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: birthday balloon setup">
+                                <img src="images/Birthday%20Setup.png" alt="Birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: first birthday balloon setup">
+                                <img src="images/1st%20Bithday%20Setup.png" alt="First birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: 30th birthday balloon setup">
+                                <img src="images/30th%20Birthday%20Setup.png" alt="30th birthday balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="gallery-category" id="gallery-graduation">
+                    <h3 class="gallery-category-title">Graduation</h3>
+                    <div class="gallery-grid gallery-grid--grad">
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: graduation balloon setup 2026">
+                                <img src="images/Graduation%20Setup%202026.png" alt="Graduation balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="gallery-category" id="gallery-baby-showers">
+                    <h3 class="gallery-category-title">Baby showers</h3>
+                    <div class="gallery-grid gallery-grid--two">
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower neutral theme setup">
+                                <img src="images/Baby%20Shower%20Krishma%20-%20Neutral%20Theme%20Setup.png" alt="Baby shower neutral theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                        <article class="gallery-cell">
+                            <button type="button" class="gallery-thumb" aria-label="Enlarge: baby shower girl theme setup">
+                                <img src="images/Baby%20Shower%20-%20Krishna%20Girl%20setup.png" alt="Baby shower girl theme balloon setup — Event Ease Balloon Décor NJ" width="800" height="800" loading="lazy">
+                            </button>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -407,7 +456,13 @@
                 <h3 class="footer-heading">On this page</h3>
                 <ul class="footer-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#gallery">Gallery</a>
+                        <ul class="footer-sublinks">
+                            <li><a href="#gallery-birthdays">Birthdays</a></li>
+                            <li><a href="#gallery-graduation">Graduation</a></li>
+                            <li><a href="#gallery-baby-showers">Baby showers</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#party-rentals">Party rentals</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -424,6 +479,16 @@
             <p>© <span id="y"></span> Event Ease Balloon Décor NJ · Sister site of <a href="https://eventeaserental.com/" target="_blank" rel="noopener noreferrer">Event Ease Party Rentals</a></p>
         </div>
     </footer>
+
+    <dialog id="gallery-lightbox" class="gallery-lightbox" aria-labelledby="gallery-lightbox-title">
+        <p id="gallery-lightbox-title" class="sr-only">Enlarged gallery photo</p>
+        <div class="gallery-lightbox-inner">
+            <button type="button" class="gallery-lightbox-close" aria-label="Close enlarged image">&times;</button>
+            <img id="gallery-lightbox-img" class="gallery-lightbox-img" src="" alt="">
+            <p id="gallery-lightbox-caption" class="gallery-lightbox-caption" hidden></p>
+        </div>
+    </dialog>
+
     <script src="js/ga.js"></script>
     <script>
         document.getElementById('y').textContent = new Date().getFullYear();
@@ -434,6 +499,43 @@
                     a.addEventListener('click', function () {
                         toggle.checked = false;
                     });
+                });
+            }
+        })();
+        (function () {
+            var dlg = document.getElementById('gallery-lightbox');
+            var big = document.getElementById('gallery-lightbox-img');
+            var cap = document.getElementById('gallery-lightbox-caption');
+            var closeBtn = document.querySelector('.gallery-lightbox-close');
+            if (dlg && big) {
+                document.querySelectorAll('.gallery-thumb').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var im = btn.querySelector('img');
+                        if (!im) return;
+                        big.src = im.currentSrc || im.src;
+                        big.alt = im.alt || '';
+                        if (cap) {
+                            cap.textContent = im.alt || '';
+                            cap.hidden = !im.alt;
+                        }
+                        dlg.showModal();
+                    });
+                });
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function () {
+                        dlg.close();
+                    });
+                }
+                dlg.addEventListener('click', function (e) {
+                    if (e.target === dlg) dlg.close();
+                });
+                dlg.addEventListener('close', function () {
+                    big.removeAttribute('src');
+                    big.alt = '';
+                    if (cap) {
+                        cap.textContent = '';
+                        cap.hidden = true;
+                    }
                 });
             }
         })();
