@@ -123,22 +123,18 @@ a {
   text-decoration: underline;
 }
 
-.btn-top {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  text-decoration: none;
-  background: linear-gradient(135deg, var(--pink), var(--purple));
-  color: var(--white);
+.top-bar-serving {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: right;
+  max-width: 26rem;
 }
 
-.btn-top:hover {
-  filter: brightness(1.06);
+.top-bar-serving strong {
+  color: #fff;
+  font-weight: 800;
 }
 
 /* Header */
@@ -290,11 +286,6 @@ a {
   color: var(--purple);
 }
 
-.header-cta-row {
-  order: 2;
-  flex-shrink: 0;
-}
-
 @media (max-width: 960px) {
   .brand {
     flex: 1;
@@ -333,11 +324,6 @@ a {
   .nav-list-external a {
     min-height: 44px;
   }
-
-  .header-cta-row .btn {
-    min-height: 44px;
-    padding-inline: 1.15rem;
-  }
 }
 
 @media (min-width: 961px) {
@@ -354,10 +340,6 @@ a {
     padding: 0 !important;
     margin: 0 !important;
     border: none !important;
-  }
-
-  .header-cta-row {
-    order: 3;
   }
 
   .nav-burger {
@@ -420,6 +402,34 @@ a {
 
 .btn-secondary:hover {
   border-color: var(--purple);
+}
+
+/* Service area (SEO) */
+.service-area-band {
+  padding: clamp(1.35rem, 3.5vw, 1.85rem) 0;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.09), rgba(56, 189, 248, 0.08));
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.service-area-heading {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-size: clamp(1.15rem, 2.8vw, 1.4rem);
+  margin: 0 0 0.55rem;
+  text-align: center;
+  color: var(--ink);
+}
+
+.service-area-text {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.service-area-text strong {
+  color: var(--ink);
 }
 
 /* Hero */
@@ -1280,6 +1290,11 @@ a {
     align-items: stretch;
     text-align: center;
     gap: 0.65rem;
+  }
+
+  .top-bar-serving {
+    text-align: center;
+    max-width: none;
   }
 
   .brand-tag {
