@@ -14,6 +14,12 @@
   --lightbox-h: min(70vh, 640px);
 }
 
+@supports (height: 100dvh) {
+  :root {
+    --lightbox-h: min(70dvh, 640px);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -22,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -59,7 +67,10 @@ body {
   color: var(--ink);
   background: var(--white);
   min-height: 100vh;
+  min-height: 100dvh;
   line-height: 1.5;
+  overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 h1, h2, h3 {
@@ -73,12 +84,15 @@ a {
 }
 
 .container {
-  width: min(1040px, 92vw);
-  margin: 0 auto;
+  width: min(1040px, 100%);
+  margin-inline: auto;
+  padding-inline: max(1rem, env(safe-area-inset-left, 0px)) max(1rem, env(safe-area-inset-right, 0px));
+  box-sizing: border-box;
 }
 
 .container-narrow {
-  width: min(640px, 92vw);
+  width: min(640px, 100%);
+  box-sizing: border-box;
 }
 
 /* Top bar */
@@ -96,6 +110,7 @@ a {
   justify-content: space-between;
   gap: 0.5rem 1rem;
   padding: 0.5rem 0;
+  padding-top: max(0.5rem, env(safe-area-inset-top, 0px));
 }
 
 .top-bar-call a {
@@ -111,6 +126,8 @@ a {
 .btn-top {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 44px;
   padding: 0.4rem 1rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -263,6 +280,12 @@ a {
   color: var(--purple);
 }
 
+.nav-list a[aria-current="page"] {
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
 .nav-list-external a {
   color: var(--purple);
 }
@@ -295,7 +318,25 @@ a {
 
   .nav-list {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 0.15rem;
+  }
+
+  .nav-list a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.35rem 0;
+    box-sizing: border-box;
+  }
+
+  .nav-list-external a {
+    min-height: 44px;
+  }
+
+  .header-cta-row .btn {
+    min-height: 44px;
+    padding-inline: 1.15rem;
   }
 }
 
@@ -545,6 +586,8 @@ a {
 
 .gallery-jump-link {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
   font-weight: 700;
@@ -704,7 +747,7 @@ a {
 
 .gallery-lightbox-inner {
   position: relative;
-  padding: 2.75rem 1rem 1.25rem;
+  padding: max(2.75rem, env(safe-area-inset-top, 0px)) 1rem max(1.25rem, env(safe-area-inset-bottom, 0px));
 }
 
 .gallery-lightbox-close {
@@ -1197,7 +1240,7 @@ a {
 }
 
 .footer-bottom {
-  padding: 1.1rem 0 1.5rem;
+  padding: 1.1rem 0 max(1.5rem, env(safe-area-inset-bottom, 0px));
   text-align: center;
   font-size: 0.86rem;
   color: rgba(255, 255, 255, 0.62);
@@ -1206,4 +1249,60 @@ a {
 .footer-bottom a {
   color: #e9d5ff;
   font-weight: 700;
+}
+
+/* Smartphones: full-width CTAs, 16px inputs (avoids iOS zoom), safe tap targets */
+@media (max-width: 479px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn-lg {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .btn-submit {
+    min-height: 48px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0.65rem;
+  }
+
+  .brand-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+    line-height: 1.35;
+  }
+
+  .gallery-lightbox-close {
+    width: 44px;
+    height: 44px;
+    top: max(0.5rem, env(safe-area-inset-top, 0px));
+    right: max(0.5rem, env(safe-area-inset-right, 0px));
+  }
+
+  .footer-col .btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .gallery-jump-link {
+    min-height: 44px;
+  }
 }
